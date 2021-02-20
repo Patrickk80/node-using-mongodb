@@ -31,7 +31,7 @@ describe('Creating documents', () => {
             expect(fs.readFileSync('src/routes/routes.js').toString())
             .to.contain("app.route('/products')")
             expect(fs.readFileSync('src/routes/routes.js').toString())
-                .to.contain(".post(addnewProduct);")
+                .to.contain(".post(addnewProduct)")
             done(); 
         } catch (error) {
             done(new Error("No routes for POST endpoint detected"));
