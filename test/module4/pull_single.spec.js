@@ -2,7 +2,7 @@ const fs = require('fs');
 const expect = require('expect.js');
 
 describe('Find a single product', () => {
-    it('Add controler to pull a single item @controller-single', (done) => {
+    it('Add controller to pull a single item @controller-single', (done) => {
         try {
             expect(fs.readFileSync('src/controllers/controllers.js').toString())
                 .to.contain("export const getProductWithID = (req, res) => {")
