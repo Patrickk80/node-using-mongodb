@@ -1,14 +1,15 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
+import routes from './src/routes/routes';
 
 const app = express();
+routes(app);
 const PORT = 4000;
 
 // bodyparser setup
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
 
 app.get('/', (req, res) =>
     res.send(`Store server running on port ${PORT}`)
